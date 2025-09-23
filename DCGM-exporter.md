@@ -1,8 +1,8 @@
 # What is the NVIDIA DCGM-Exporter
 
-[DCGM-Exporter](https://docs.nvidia.com/datacenter/cloud-native/gpu-telemetry/latest/dcgm-exporter.html) is a tool based on the Go APIs to NVIDIA DCGM that allows users to gather GPU metrics and understand workload behavior or monitor GPUs in clusters. DCGM Exporter is written in Go and exposes GPU metrics at an HTTP endpoint (/metrics) for monitoring solutions such as Prometheus. For more details on the use cases see the [Dynatrace NVIDIA DCGM-Exporter Hub tile](https://www.dynatrace.com/hub/detail/nvidia-dcgm-exporter/?query=nvidi&filter=all)
+[DCGM-Exporter](https://docs.nvidia.com/datacenter/cloud-native/gpu-telemetry/latest/dcgm-exporter.html) is a tool based on the Go APIs to NVIDIA DCGM that allows users to gather GPU metrics and understand workload behavior or monitor GPUs in clusters. DCGM Exporter is written in Go and exposes GPU metrics at an HTTP endpoint (/metrics) for monitoring solutions. 
 
-Below is a guide for how to configure metrics scraping from the NVIDIA DCGM-Exporter for ingest and analysis within Dynatrace. 
+Below is a guide for how to configure metrics scraping from the NVIDIA DCGM-Exporter for ingest and analysis within Dynatrace.  For more details on the use cases see the [Dynatrace NVIDIA DCGM-Exporter Hub tile](https://www.dynatrace.com/hub/detail/nvidia-dcgm-exporter/?query=nvidi&filter=all)
 
 ## Metric ingest into Dynatrace 
 
@@ -34,19 +34,18 @@ kubectl -n nvidia-gpu-operator describe pods --selector=nvidia-dcgm-exporter | g
 
 ### Step 3
 
-Validate and analyze metrics with notesbooks.  The metrics will have a `DCGM` prefix.  You can use notebook to as shown below.
+Metrics will have a `DCGM` prefix.  Refer to [dcgm-exporter](https://github.com/NVIDIA/dcgm-exporter) repo for metrics names.
 
-<img src="images/notebook.png" width="75%" height="75%">
+You can validate and analyze metrics with Dynatrace notebook as shown below:
+
+<img src="images/DCGM-exporter-notebook.png" width="75%" height="75%">
 
 ### Step 4 
 
 Review metrics in Dynatrace dashboard.
 
-<img src="images/dashboard.png" width="75%" height="75%">
+<img src="images/DCGM-exporter-dashboard.png" width="75%" height="75%">
 
-[An example Dashboard](https://dqr03366.apps.dynatrace.com/ui/apps/dynatrace.dashboards/dashboard/af667587-3d7f-4a66-899b-64869a3ce264#from=now%28%29-24h&to=now%28%29&tileIds=13) can be found in the Dynatrace Playground
+[An example Dashboard](https://dqr03366.apps.dynatrace.com/ui/apps/dynatrace.dashboards/dashboard/af667587-3d7f-4a66-899b-64869a3ce264#from=now%28%29-24h&to=now%28%29&tileIds=13) can be found in the Dynatrace Playground.
 
-
-## Reference to the metrics exposed by NVIDIA DCGM exporter.   
-
-Refer to dcgm-exporter repo for more details https://github.com/NVIDIA/dcgm-exporter  
+ 
