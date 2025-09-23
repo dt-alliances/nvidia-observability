@@ -10,6 +10,8 @@ These guides are structured according the visual shown below.
 
 [Dynatrace AI Observability](https://www.dynatrace.com/hub/detail/ai-and-llm-observability/?filter=ai-ml-observability) brings End-to-End visibility to user interactions, prompt flows, and AI/LLM model performance of your Generative AI, agentic, and LLM services.
 
+* [AI-observability](AI-observability.md)
+
 ## 2. NVIDIA NIM, NeMo and technologies
 
 Expanded observability coverage of exposed Prometheus metrics and OpenTelemetry telemetry from the various NVIDIA generative AI and lifecycle management tools and technologies. 
@@ -19,6 +21,8 @@ Expanded observability coverage of exposed Prometheus metrics and OpenTelemetry
 ## 3. Kubernetes
 
 Real-time auto-discovery and analysis of applications, NVIDIA platform components, and infrastructure.
+
+* [Kubernetes](K8s.md)
 
 ## 4. GPU telemetry
 
